@@ -1,0 +1,5 @@
+กำหนดตัวแปรมาเก็บarray
+var fakeArray = [...arrayDestination]
+
+fakeArray คือ ตัวแปรที่จะทำการcopy array
+...arrayDestination คือ array ที่จะถูก copy
