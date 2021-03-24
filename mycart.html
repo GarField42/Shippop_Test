@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Test3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Book Store</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <ul class="nav-left">
+                <li>
+                    <h1 onclick="location.href='Test3.html';" style="cursor: pointer;">Book</h1>
+                </li>
+                <li>
+                    สินค้าใหม่
+                </li>
+                <li>
+                    สินค้าขายดี
+                </li>
+                <li>
+                    สินค้าลดราคา
+                </li>
+                <li>
+                    สินค้าแนะนำ
+                </li>
+            </ul>
+            <ul class="nav-right">
+                <li>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </li>
+                <li onclick="dropdownCart()" style="cursor: pointer;">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <div class="dropdown-cart" id="dropdown-cart">
+                        <div>
+                            <h2>ตระกร้าของฉัน</h2>
+                        </div>
+                        <div>สินค้าในตระกร้า</div>
+                        <button class="btn-checklist"
+                            onclick="location.href='mycart.html';">ดูหรือแก้ไขตระกร้าของฉัน</button>
+                        <div class="line"></div>
+                        <div class="space"></div>
+                        <div class="line"></div>
+                        <div>
+                            <p>ยอดรวม :
+                            <h2> 499.00</h2>
+                            </p>
+                        </div>
+                        <button class="btn-pay" onclick="location.href='payment.html';">ไปชำระเงิน</button>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="Test3.js"></script>
+
+    <h1 style="width: 80vw;margin-left: 10%;margin-top: 5%;">ตระกร้าสินค้า</h1>
+    <div class="cart-container">
+        <div class="cart-detail">
+            <div class="head-cart-detail">
+                <p>สินค้า</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p>ราคา</p>
+                <p>จำนวน</p>
+                <p>ยอดรวม</p>
+            </div>
+            <div class="line" style="margin: 0;margin-bottom: 5%;"></div>
+            <div class="my-cart-detail">
+                <div class="good-incart" style="width: 15%;height: 9vw;"></div>
+                <p>รสชาติของผลไม้ที่ยังไม่สุกงอม</p>
+                <p><b>THB499.00</b></p>
+                <div class="num-good">
+                    <div class="show-num">1</div>
+                    <div class="change-num">
+                        <div class="increase"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+                        <div class="decrease"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <p><b>THB499.00</b></p>
+            </div>
+            <div class="line" style="margin-top: 5%;margin-bottom: 5%;"></div>
+            <div>
+                <button class="continue-shop" onclick="location.href='Test3.html';"">ซื้อสินค้าต่อไป</button>
+                <button class=" clear-cart">ล้างตระกร้าสินค้า</button>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <div class="detail-cart-summary">
+                <h1>สรุปคำสั่งซื้อ</h1>
+                <div class="mini-detail-cart-summary">
+                    <p><b>ยอดรวม</b></p>
+                    <p><b>THB499.00</b></p>
+                </div>
+                <div class="mini-detail-cart-summary">
+                    <p><b>ค่าส่ง</b></p>
+                    <p><b>THB1.00</b></p>
+                </div>
+                <div class="line"></div>
+                <div class="mini-detail-cart-summary">
+                    <p><b>ยอดสุทธิ</b></p>
+                    <p><b>THB500.00</b></p>
+                </div>
+                <button class="btn-pay" style="padding-top: 4%;padding-bottom: 4%;margin-top: 5%;" onclick="location.href='payment.html';">ไปชำระเงิน</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

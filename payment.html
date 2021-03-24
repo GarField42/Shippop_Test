@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Test3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Book Store</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <ul class="nav-left">
+                <li>
+                    <h1 onclick="location.href='Test3.html';" style="cursor: pointer;">Book</h1>
+                </li>
+                <li>
+                    สินค้าใหม่
+                </li>
+                <li>
+                    สินค้าขายดี
+                </li>
+                <li>
+                    สินค้าลดราคา
+                </li>
+                <li>
+                    สินค้าแนะนำ
+                </li>
+            </ul>
+            <ul class="nav-right">
+                <li>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </li>
+                <li onclick="dropdownCart()" style="cursor: pointer;">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <div class="dropdown-cart" id="dropdown-cart">
+                        <div>
+                            <h2>ตระกร้าของฉัน</h2>
+                        </div>
+                        <div>สินค้าในตระกร้า</div>
+                        <button class="btn-checklist">ดูหรือแก้ไขตระกร้าของฉัน</button>
+                        <div class="line"></div>
+                        <div class="space"></div>
+                        <div class="line"></div>
+                        <div>
+                            <p>ยอดรวม :
+                            <h2> 499.00</h2>
+                            </p>
+                        </div>
+                        <button class="btn-pay">ไปชำระเงิน</button>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 style="width: 80vw;margin-left: 10%;margin-top: 5%;">ชำระเงิน</h1>
+    <div class="payment-container">
+        <div class="payment-detail">
+            <div class="head-payment-detail">
+                <p><b>ที่อยู่ในการจัดส่ง</b></p>
+            </div>
+            <div class="line" style="margin: 0;margin-bottom: 5%;"></div>
+            <div class="my-payment-detail">
+                <div class="my-payment-detail-left">
+                    <p>ชื่อ</p>
+                    <input class="half-input" type="text">
+                </div>
+                <div class="my-payment-detail-right">
+                    <p>นามสกุล</p>
+                    <input class="half-input" type="text">
+                </div>
+            </div>
+            <p>ประเทศ</p>
+            <select id="country" class="country">
+                <option value="thailand">Thailand</option>
+                <option value="่japan">Japan</option>
+                <option value="chinese">Chinese</option>
+                <option value="brazil">Brazil</option>
+            </select>
+            <p>ที่อยู่ (บ้านเลขที่ / หมู่บ้าน / หมู่ที่ / ซอย / ถนน)</p>
+            <input class="full-input" type="text">
+            <div class="my-payment-detail">
+                <div class="my-payment-detail-left">
+                    <p>แขวง/ตำบล</p>
+                    <input class="half-input" type="text">
+                </div>
+                <div class="my-payment-detail-right">
+                    <p>เขต/อำเภอ</p>
+                    <input class="half-input" type="text">
+                </div>
+            </div>
+            <div class="my-payment-detail">
+                <div class="my-payment-detail-left">
+                    <p>จังหวัด</p>
+                    <input class="half-input" type="text">
+                </div>
+                <div class="my-payment-detail-right">
+                    <p>รหัสไปรษณีย์</p>
+                    <input class="half-input" type="text">
+                </div>
+            </div>
+            <p>เบอร์ติดต่อ (กรุณาระบุหมายเลขโทรศัพท์ เฉพาะตัวเลขเท่านั้น)</p>
+            <input class="full-input" type="text">
+
+            <div class="head-payment-detail" style="margin-top: 10%;">
+                <p><b>เลือกขนส่ง</b></p>
+            </div>
+            <div class="line" style="margin-top: 0;margin-bottom: 5%;"></div>
+            <div class="payment-option" id="paymentOption1" onclick="selectPayment1()">
+                <div style="display: flex; justify-content: center; width: 10%;">
+                    <div class="dot" id="dot1"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between;width: 80%;">
+                    <p>Free Shipping</p>
+                    <p><b>THB0.00</b></p>
+                </div>
+            </div>
+            <div class="payment-option" id="paymentOption2" onclick="selectPayment2()">
+                <div style="display: flex; justify-content: center; width: 10%;">
+                    <div class="dot" id="dot2"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between;width: 80%;">
+                    <p>KERRY EXPRESS</p>
+                    <p><b>THB0.00</b></p>
+                </div>
+            </div>
+
+            <div class="head-payment-detail" style="margin-top: 10%;">
+                <p><b>วิธีชำระเงิน</b></p>
+            </div>
+            <div class="line" style="margin-top: 0;margin-bottom: 5%;"></div>
+            <div class="payment-option" id="paymentOption3" onclick="selectPayment3()">
+                <div style="display: flex; justify-content: center; width: 10%;">
+                    <div class="dot" id="dot3"></div>
+                </div>
+                <div style="display: flex; justify-content: space-around ;align-items: center; width: 13%;">
+                    <i class="fa fa-money" aria-hidden="true"></i>
+                    <p>Cash</p>
+                </div>
+            </div>
+            <div class="payment-option" id="paymentOption4" onclick="selectPayment4()">
+                <div style="display: flex; justify-content: center; width: 10%;">
+                    <div class="dot" id="dot4"></div>
+                </div>
+                <div style="display: flex; justify-content: space-around ;align-items: center; width: 20%;">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                    <p>Credit / Debit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <div class="detail-cart-summary">
+                <h1>สรุปคำสั่งซื้อ</h1>
+                <div class="mini-detail-cart-summary">
+                    <p><b>ยอดรวม</b></p>
+                    <p><b>THB499.00</b></p>
+                </div>
+                <div class="mini-detail-cart-summary">
+                    <p><b>ค่าส่ง</b></p>
+                    <p><b>THB1.00</b></p>
+                </div>
+                <div class="line"></div>
+                <div class="mini-detail-cart-summary">
+                    <p><b>ยอดสุทธิ</b></p>
+                    <p><b>THB500.00</b></p>
+                </div>
+                <button class="btn-pay" style="padding-top: 4%;padding-bottom: 4%;margin-top: 5%;"><i class="fa fa-lock"
+                        aria-hidden="true"></i> ชำระเงิน</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="Test3.js"></script>
+
+</body>
+
+</html>

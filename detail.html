@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Test3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Book Store</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <ul class="nav-left">
+                <li>
+                    <h1 onclick="location.href='Test3.html';" style="cursor: pointer;">Book</h1>
+                </li>
+                <li>
+                    สินค้าใหม่
+                </li>
+                <li>
+                    สินค้าขายดี
+                </li>
+                <li>
+                    สินค้าลดราคา
+                </li>
+                <li>
+                    สินค้าแนะนำ
+                </li>
+            </ul>
+            <ul class="nav-right">
+                <li>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </li>
+                <li onclick="dropdownCart()" style="cursor: pointer;">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <div class="dropdown-cart" id="dropdown-cart">
+                        <div>
+                            <h2>ตระกร้าของฉัน</h2>
+                        </div>
+                        <div>สินค้าในตระกร้า</div>
+                        <button class="btn-checklist"
+                            onclick="location.href='mycart.html';">ดูหรือแก้ไขตระกร้าของฉัน</button>
+                        <div class="line"></div>
+                        <div class="space"></div>
+                        <div class="line"></div>
+                        <div>
+                            <p>ยอดรวม :
+                            <h2> 499.00</h2>
+                            </p>
+                        </div>
+                        <button class="btn-pay" onclick="location.href='payment.html';">ไปชำระเงิน</button>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="detail">
+        <div class="show-pic"></div>
+        <div class="detail-good">
+            <h1>รสชาติของผลไม้ที่ยังไม่สุกงอม</h1>
+            <p>ผู้เขียน : โซนัมจู</p>
+            <p>สำนักพิมพ์ : Piccolo</p>
+            <p>หมวดหมู่ : วรรณกรรม เรื่องสั้น</p>
+            <p>ประเภทของสินค้า : Books</p>
+            <p>บาร์โค้ด : 9786161840488</p>
+            <div class="space"></div>
+            <p>
+            <h2>ราคา</h2>
+            <h1>THB499.00</h1>
+            </p>
+            <div class="option">
+                <div class="num-good">
+                    <div class="show-num">1</div>
+                    <div class="change-num">
+                        <div class="increase"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+                        <div class="decrease"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+                <button class="add">Add</button>
+                <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i> Wishlist</button>
+            </div>
+            <p>แชร์ : <i class="fa fa-envelope" aria-hidden="true"></i> <i class="fa fa-twitter-square"
+                    aria-hidden="true"></i> <i class="fa fa-facebook-square" aria-hidden="true"></i> <i
+                    class="fa fa-google-plus-official" aria-hidden="true"></i></p>
+        </div>
+    </div>
+    <div class="pic">
+        <div class="good" style="width: 12%;height: 15vw;"></div>
+        <div class="good" style="width: 12%;height: 15vw; background-color: beige;"></div>
+    </div>
+
+    <div class="head-des">
+        <p style="text-decoration: underline;">เกี่ยวกับสินค้า</p>
+        <p>รายละเอียด</p>
+    </div>
+    <hr>
+    <div class="des">
+        <p><b>รายละเอียด</b> : รสชาติของผลไม้ที่ยังไม่สุกงอม</p>
+        <p>
+            ก่อนที่ชีวิตของเด็กสาววัยย่างสิบหกปีทั้งสี่คนจะได้สัมผัสกับความหวานหอมจากผลไม้รสชาติที่สุดในชีวิต
+            พวกเธอจะต้องต่อสู้กับความจริงปวดที่ค่อยๆ
+            กัดเซาะจิตใจและผ่านพ้นช่วงชีวิตซึ่งเต็มไปด้วยความยากลำบากนานา
+        </p>
+        <p>
+            ทั้งความคิดที่ว่าตัวเองโดดเดี่ยว แม้อยู่ในกลุ่มเพื่อนที่เหมือนจะรักกันดี หรือแม้จะมีครอบครัวที่พร้อมหน้า 
+            ความรู้สึกที่ว่าไม่มีใครจริงใจสักคนนั้นกัดกินจิตใจทีละน้อยจนก่อเกิดความหวาดระแวงขึ้น ตอนนี้พวกเธอจึงทำได้เพียงพยายามในแบบของตนเอง 
+            เพื่อผ่านพ้นความไม่คุ้นเคยที่ยากเข็ญไปให้ได้ ไม่ว่าวิธีเหล่านั้นจะถูกหรือผิด... แล้ววันหนึ่งเมื่อถึงเวลาอาจจะไม่ทั้งหมด 
+            แต่อย่างน้อยก็จะมีหนึ่งคนที่พูดออกมาได้อย่างเต็มปากเต็มคำว่า "นี่เป็นผลไม้อร่อยที่สุดเท่าที่ฉันเคยกินมาตั้งแต่เกิดเลย"
+        </p>
+    </div>
+    <div class="another-good">
+        <div style="display: flex; justify-content: space-between;">
+            <h2>สินค้าที่เกี่ยวข้อง</h2>
+            <p style="text-decoration: underline;">ดูสินค้าทั้งหมด</p>
+        </div>
+        <div class="list-good">
+            <div class="good" onclick="location.href='detail.html';"></div>
+            <div class="good" onclick="location.href='detail.html';"></div>
+            <div class="good" onclick="location.href='detail.html';"></div>
+            <div class="good" onclick="location.href='detail.html';"></div>
+            <div class="good" onclick="location.href='detail.html';"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="Test3.js"></script>
+
+</body>
+
+</html>
