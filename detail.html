@@ -76,11 +76,12 @@
             <h1>THB499.00</h1>
             </p>
             <div class="option">
-                <div class="num-good">
-                    <div class="show-num">1</div>
+                <div id="num-good" class="num-good">
+                    <div class="show-num">{{num}}</div>
                     <div class="change-num">
-                        <div class="increase"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
-                        <div class="decrease"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                        <div @click="increase" class="increase"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+                        <div @click="decrease" class="decrease"><i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
                 <button class="add">Add</button>
@@ -109,10 +110,13 @@
             กัดเซาะจิตใจและผ่านพ้นช่วงชีวิตซึ่งเต็มไปด้วยความยากลำบากนานา
         </p>
         <p>
-            ทั้งความคิดที่ว่าตัวเองโดดเดี่ยว แม้อยู่ในกลุ่มเพื่อนที่เหมือนจะรักกันดี หรือแม้จะมีครอบครัวที่พร้อมหน้า 
-            ความรู้สึกที่ว่าไม่มีใครจริงใจสักคนนั้นกัดกินจิตใจทีละน้อยจนก่อเกิดความหวาดระแวงขึ้น ตอนนี้พวกเธอจึงทำได้เพียงพยายามในแบบของตนเอง 
-            เพื่อผ่านพ้นความไม่คุ้นเคยที่ยากเข็ญไปให้ได้ ไม่ว่าวิธีเหล่านั้นจะถูกหรือผิด... แล้ววันหนึ่งเมื่อถึงเวลาอาจจะไม่ทั้งหมด 
-            แต่อย่างน้อยก็จะมีหนึ่งคนที่พูดออกมาได้อย่างเต็มปากเต็มคำว่า "นี่เป็นผลไม้อร่อยที่สุดเท่าที่ฉันเคยกินมาตั้งแต่เกิดเลย"
+            ทั้งความคิดที่ว่าตัวเองโดดเดี่ยว แม้อยู่ในกลุ่มเพื่อนที่เหมือนจะรักกันดี หรือแม้จะมีครอบครัวที่พร้อมหน้า
+            ความรู้สึกที่ว่าไม่มีใครจริงใจสักคนนั้นกัดกินจิตใจทีละน้อยจนก่อเกิดความหวาดระแวงขึ้น
+            ตอนนี้พวกเธอจึงทำได้เพียงพยายามในแบบของตนเอง
+            เพื่อผ่านพ้นความไม่คุ้นเคยที่ยากเข็ญไปให้ได้ ไม่ว่าวิธีเหล่านั้นจะถูกหรือผิด...
+            แล้ววันหนึ่งเมื่อถึงเวลาอาจจะไม่ทั้งหมด
+            แต่อย่างน้อยก็จะมีหนึ่งคนที่พูดออกมาได้อย่างเต็มปากเต็มคำว่า
+            "นี่เป็นผลไม้อร่อยที่สุดเท่าที่ฉันเคยกินมาตั้งแต่เกิดเลย"
         </p>
     </div>
     <div class="another-good">
@@ -121,16 +125,34 @@
             <p style="text-decoration: underline;">ดูสินค้าทั้งหมด</p>
         </div>
         <div class="list-good">
-            <div class="good" onclick="location.href='detail.html';"></div>
-            <div class="good" onclick="location.href='detail.html';"></div>
-            <div class="good" onclick="location.href='detail.html';"></div>
-            <div class="good" onclick="location.href='detail.html';"></div>
-            <div class="good" onclick="location.href='detail.html';"></div>
+            <div class="good" onclick="location.href='detail.html';">Add to cart</div>
+            <div class="good" onclick="location.href='detail.html';">Add to cart</div>
+            <div class="good" onclick="location.href='detail.html';">Add to cart</div>
+            <div class="good" onclick="location.href='detail.html';">Add to cart</div>
+            <div class="good" onclick="location.href='detail.html';">Add to cart</div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="Test3.js"></script>
+
+    <script>
+
+        const num_good = new Vue({
+            el: '#num-good',
+            data: {
+                num: '1'
+            },
+            methods: {
+                increase() {
+                    this.num++;
+                },
+                decrease() {
+                    this.num--;
+                }
+            }
+        })
+    </script>
 
 </body>
 

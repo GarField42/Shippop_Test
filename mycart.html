@@ -83,14 +83,15 @@
                 <div class="good-incart" style="width: 15%;height: 9vw;"></div>
                 <p>รสชาติของผลไม้ที่ยังไม่สุกงอม</p>
                 <p><b>THB499.00</b></p>
-                <div class="num-good">
-                    <div class="show-num">1</div>
+                <div id="num-good" class="num-good">
+                    <div class="show-num">{{num}}</div>
                     <div class="change-num">
-                        <div class="increase"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
-                        <div class="decrease"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                        <div @click="increase" class="increase"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+                        <div @click="decrease" class="decrease"><i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
-                <p><b>THB499.00</b></p>
+                <p><b>THB{{ total() }}</b></p>
             </div>
             <div class="line" style="margin-top: 5%;margin-bottom: 5%;"></div>
             <div>
@@ -114,11 +115,36 @@
                     <p><b>ยอดสุทธิ</b></p>
                     <p><b>THB500.00</b></p>
                 </div>
-                <button class="btn-pay" style="padding-top: 4%;padding-bottom: 4%;margin-top: 5%;" onclick="location.href='payment.html';">ไปชำระเงิน</button>
+                <button class="btn-pay" style="padding-top: 4%;padding-bottom: 4%;margin-top: 5%;"
+                    onclick="location.href='payment.html';">ไปชำระเงิน</button>
             </div>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="Test3.js"></script>
+
+    <script>
+
+        const num_good = new Vue({
+            el: '.my-cart-detail',
+            data: {
+                num: '1',
+                money: '499.00'
+            },
+            methods: {
+                increase() {
+                    this.num++;
+                },
+                decrease() {
+                    this.num--;
+                },
+                total: function(){
+                    return parseInt(this.num) * parseInt(this.money);
+                },
+            },
+        })
+    </script>
 </body>
 
 </html>

@@ -119,11 +119,17 @@ nav{
     margin: 1px;
     background-color: wheat;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+    font-size: 2em;
 }
 
 .good:hover{
     box-shadow: 0px 0px 10px #555;
     background-color: beige;
+    color: blue;
 }
 
 .space{
